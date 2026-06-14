@@ -1,0 +1,35 @@
+FAST AND SLOW METHOD
+
+
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def middleNode(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        fast = head
+        slow = head 
+        while fast!= None and fast.next != None:
+            fast = fast.next.next
+            slow =  slow.next
+        return slow
+
+METHOD 1
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def middleNode(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        count = 0
+        curr = head
+        while curr != None:
+            curr = curr.next 
+            count = count + 1
+        curr = head
+        for i in range(count//2):
+            curr = curr.next
+        return curr
+            
