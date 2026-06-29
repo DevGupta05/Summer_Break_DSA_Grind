@@ -1,0 +1,16 @@
+class Solution:
+    def calPoints(self, operations: List[str]) -> int:
+        result= []
+        for i in operations:
+            if i == 'C':
+                result.pop()
+            elif i == 'D':
+                result.append(2*result[len(result)-1])
+            elif i == "+":
+                result.append(result[len(result)-1]+result[len(result)-2])
+            else :
+                result.append(int(i))
+        a = sum(result)
+        return a
+
+DATE : 29 / 6 / 26
