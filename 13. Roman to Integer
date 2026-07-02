@@ -15,3 +15,4 @@ class Solution:
             else:
                 result += hash_table[s[i]]
         return result            
+WE ALSO DO IT IN ANOTHER WAY
