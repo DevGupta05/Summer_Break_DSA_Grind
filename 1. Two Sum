@@ -1,0 +1,12 @@
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+         
+        n= len(nums)
+        for fp in range(n):
+            mp = fp + 1
+            
+            while mp <= n -1 :
+                if nums[fp] + nums[mp] == target:
+                    return [fp,mp] 
+                else:
+                    mp += 1
