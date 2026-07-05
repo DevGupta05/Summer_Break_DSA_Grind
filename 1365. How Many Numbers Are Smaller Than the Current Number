@@ -8,3 +8,5 @@ class Solution:
                     c += 1
             ans.append(c)
         return ans
+
+sa
