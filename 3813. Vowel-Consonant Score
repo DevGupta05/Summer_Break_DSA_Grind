@@ -1,0 +1,17 @@
+class Solution:
+    def vowelConsonantScore(self, s: str) -> int:
+        c_count = 0
+        v_count = 0
+        if len(s) > 0:
+            for i in s:
+                if i  in "bcdfghjklmnpqrstvwxyz":
+                    c_count += 1 
+                elif i in "aeiou":
+                    v_count += 1
+            if c_count > 0:
+                score = v_count//c_count
+            else:
+                return 0
+        else:
+            return 0
+        return score           
