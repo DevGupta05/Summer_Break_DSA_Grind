@@ -17,3 +17,4 @@ class Solution:
             p1 = p1.next
         p1.next = p1.next.next
         return head
+# you can do it in other way too
