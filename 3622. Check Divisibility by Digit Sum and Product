@@ -1,0 +1,11 @@
+class Solution:
+    def checkDivisibility(self, n: int) -> bool:
+        sum_of_digits = 0
+        multiply_of_digits = 1
+        for i in str(n):
+            sum_of_digits += int(i)
+            multiply_of_digits *= int(i)
+        if n % (sum_of_digits + multiply_of_digits) == 0:
+            return True
+        else :
+            return False
